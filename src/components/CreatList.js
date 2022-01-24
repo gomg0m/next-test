@@ -1,15 +1,15 @@
 import React, { useState } from "react"
-import styled from "styled-components"
-import { Button } from "antd"
-import DetailList from "../src/components/DetailLIst"
+//import styled from "styled-components"
+//import { Button } from "antd"
+import DetailList from "./DetailLIst"
 
-const CreateListDiv = styled.div`
-  padding: 3rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`
+//const CreateListDiv = styled.div`
+//  padding: 3rem;
+//  width: 100%;
+ // display: flex;
+//  align-items: center;
+//  flex-direction: column;
+//`
 
 const CreateList = () => {
   const [countList, setCountList] = useState([0])
@@ -24,12 +24,12 @@ const CreateList = () => {
   }
 
   return (
-    <CreateListDiv>
+    <div>
       <DetailList countList={countList} />
-      <Button onClick={onAddDetailDiv}>
+      <button onClick={onAddDetailDiv}>
           추가
-      </Button>
-    </CreateListDiv>
+      </button>
+    </div>
   )
 }
 export default CreateList
