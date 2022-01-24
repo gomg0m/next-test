@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Button } from "antd"
-import DetailList from "./DetailLIst"
+import DetailList from "../src/components/DetailLIst"
 
 const CreateListDiv = styled.div`
   padding: 3rem;
