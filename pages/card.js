@@ -7,7 +7,24 @@ import { isUnitless } from '@mui/material/styles/cssUtils';
 
 export default function ActionAreaCard() {
   
-  const [list, setListData] = useState(["image/IU.jpg","image/BTS.jpg","image/IU.jpg","image/BTS.jpg"]);
+  const [list, setListData] = useState([
+    {
+      img: "image/IU.jpg",
+      title: "IU"
+    },
+    {
+      img: "image/BTS.jpg",
+      title: "BTS"
+    },
+    {
+      img: "image/IU.jpg",
+      title: "IU"
+    },
+    { 
+      img:"image/BTS.jpg",
+      title: "BTS"
+    }
+  ]);
 
   const API_URL = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
   
@@ -36,12 +53,12 @@ export default function ActionAreaCard() {
                   <CardMedia
                     component="img"
                     height="140"
-                    image={item}
+                    image={item.img}
                     alt="IU"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      IU
+                      {item.title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       {item.name}
