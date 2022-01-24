@@ -10,19 +10,23 @@ export default function ActionAreaCard() {
   const [list, setListData] = useState([
     {
       img: "image/IU.jpg",
-      title: "IU"
+      title: "IU",
+      name: "좋아 좋아"
     },
     {
       img: "image/BTS.jpg",
-      title: "BTS"
+      title: "BTS",
+      name: "가자~"
     },
     {
       img: "image/IU.jpg",
-      title: "IU"
+      title: "IU",
+      name: "와우~~"
     },
     { 
       img:"image/BTS.jpg",
-      title: "BTS"
+      title: "BTS",
+      name: "힘차게!"
     }
   ]);
 
@@ -42,13 +46,12 @@ export default function ActionAreaCard() {
 
 
   return (
-    <div>
-      <Grid columns={3}>
-        <Grid.Row>
+    <div display="flex">
+
           { 
           list.map((item)=>(
-            <Grid.Column>
-              <Card sx={{ maxWidth: 345 }}>
+
+              <Card sx={{ maxWidth: 345 }} display="flex">
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -66,10 +69,9 @@ export default function ActionAreaCard() {
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </Grid.Column>
+
           )) }
-        </Grid.Row>
-      </Grid>
+
     </div>
   );
 } 
